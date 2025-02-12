@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Smart Pantry</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header>
+      <h1>Smart Pantry Dashboard</h1>
+      <button id="logoutButton">Logout</button>
+    </header>
+
+    <!-- Inventory Management Section -->
+    <section class="inventory">
+      <h2>Manage Your Pantry</h2>
+      <form id="inventoryForm">
+        <input type="text" id="itemName" placeholder="Item Name" required>
+        <input type="number" id="itemQuantity" placeholder="Quantity" required>
+        <input type="date" id="expirationDate" required>
+        <button type="submit">Add Item</button>
+        <button type="button" id="voiceCommandButton">🎤 Add by Voice</button>
+      </form>
+      <div class="inventory-list">
+        <h3>Your Pantry Items</h3>
+        <ul id="inventoryItems"></ul>
+      </div>
+    </section>
+
+    <!-- Recipe Suggestions Section -->
+    <section class="recipes">
+      <h2>Recipe Suggestions</h2>
+      <div id="recipeSuggestions">
+        <p>Recipes will appear here based on your pantry items.</p>
+      </div>
+    </section>
+
+    <!-- Expiration Alerts Section -->
+    <section class="alerts">
+      <h2>Expiration Alerts</h2>
+      <div id="expirationAlerts">
+        <p>Alerts for items nearing expiration will appear here.</p>
+      </div>
+    </section>
+
+    <!-- Shopping List Section -->
+    <section class="shopping-list">
+      <h2>Shopping List</h2>
+      <div id="shoppingList">
+        <p>Your shopping list will appear here.</p>
+      </div>
+      <button id="generateShoppingList">Generate Shopping List</button>
+    </section>
+  </div>
+  <script src="java/dashboard.js"></script>
+</body>
+</html>

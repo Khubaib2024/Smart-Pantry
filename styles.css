@@ -1,0 +1,342 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Login and Signup Page Styles */
+.login-container, .signup-container {
+  max-width: 400px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-container h1, .signup-container h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-container input, .signup-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.login-container input::placeholder, .signup-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-container button, .signup-container button {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.login-container button:hover, .signup-container button:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+.login-container p, .signup-container p {
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.login-container a, .signup-container a {
+  color: #28a745;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-container a:hover, .signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  max-width: 1200px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#logoutButton {
+  padding: 10px 20px;
+  background: #ff4b5c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#logoutButton:hover {
+  background: #ff1c34;
+  transform: translateY(-2px);
+}
+
+/* Inventory Management Section */
+.inventory {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.inventory h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#inventoryForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#inventoryForm input {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+#inventoryForm input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#inventoryForm button {
+  padding: 12px 20px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#inventoryForm button:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+#voiceCommandButton {
+  background: #007bff;
+}
+
+#voiceCommandButton:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.inventory-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inventory-list li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.inventory-list li:hover {
+  transform: translateY(-5px);
+}
+
+.inventory-list li span {
+  color: #fff;
+}
+
+.inventory-list li button {
+  padding: 8px 15px;
+  background: #ff4b5c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.inventory-list li button:hover {
+  background: #ff1c34;
+  transform: translateY(-2px);
+}
+
+/* Recipe Suggestions Section */
+.recipes {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.recipes h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#recipeSuggestions {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Expiration Alerts Section */
+.alerts {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.alerts h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#expirationAlerts {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Shopping List Section */
+.shopping-list {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.shopping-list h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#shoppingList {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#generateShoppingList {
+  padding: 12px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#generateShoppingList:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #inventoryForm {
+    flex-direction: column;
+  }
+
+  #inventoryForm input {
+    width: 100%;
+  }
+
+  #inventoryForm button {
+    width: 100%;
+  }
+}
